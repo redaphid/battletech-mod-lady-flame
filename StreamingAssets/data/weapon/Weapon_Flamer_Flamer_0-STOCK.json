@@ -1,6 +1,6 @@
 {
     "Description": {
-        "Name": "Fire of Aphids",
+        "Name": "Flame of Aphids",
         "Details": "A Flamethrower that pulses with strange, aphidy energy."
     },
     "MaxRange": 540,
@@ -13,9 +13,9 @@
             },
             "effectType": "StatisticEffect",
             "Description": {
-                "Id": "StatusEffect-LadyFlame-Aim",
-                "Name": "Perfect Fl-Aim",
-                "Details": "Bypass armor and structure damage",
+                "Id": "StatusEffect-LadyFlame-Walk",
+                "Name": "Speedwalker",
+                "Details": "Walks faster because they are on fire",
                 "Icon": "UixSvgIcon_specialAbility_HiredGuns"
             },
             "nature": "Buff",
@@ -30,8 +30,7 @@
                 "statName": "WalkSpeed",
                 "operation": "Float_Multiply",
                 "modValue": "3.0",
-                "modType": "System.Single",
-                "targetCollection": "Weapon"
+                "modType": "System.Single"
             },
             "tagData": null,
             "floatieData": null,
@@ -42,7 +41,7 @@
         },
         {
             "durationData": {
-                "duration": -1,
+                "duration": 3,
                 "ticksOnActivations": true,
                 "useActivationsOfTarget": true,
                 "ticksOnEndOfRound": false,
@@ -65,23 +64,54 @@
             "effectType": "StatisticEffect",
             "Description": {
                 "Id": "LadyFlameHeater",
-                "Name": "AFRAID OF HOT TUB",
+                "Name": "AFRAID OF HOT TUB 2",
                 "Details": "This mech cannot take any heat",
                 "Icon": "uixSvgIcon_status_sensorsImpaired"
             },
             "nature": "Debuff",
             "statisticData": {
                 "statName": "HeatGenerated",
-                "operation": "Set",
-                "modValue": "999",
-                "modType": "System.Int32"
+                "operation": "Float_Multiply",
+                "modValue": "9.0",
+                "modType": "System.Single"
+            }            
+        },
+        {
+            "durationData": {
+                "duration": 3,
+                "ticksOnActivations": true,
+                "useActivationsOfTarget": true,
+                "ticksOnEndOfRound": false,
+                "ticksOnMovements": false,
+                "stackLimit": 0,
+                "clearedWhenAttacked": false
             },
-            "tagData": null,
-            "floatieData": null,
-            "actorBurningData": null,
-            "vfxData": null,
-            "instantModData": null,
-            "poorlyMaintainedEffectData": null
+            "targetingData": {
+                "effectTriggerType": "OnHit",
+                "triggerLimit": 0,
+                "extendDurationOnTrigger": 0,
+                "specialRules": "NotSet",
+                "effectTargetType": "NotSet",
+                "range": 0,
+                "forcePathRebuild": false,
+                "forceVisRebuild": false,
+                "showInTargetPreview": true,
+                "showInStatusPanel": true
+            },
+            "effectType": "StatisticEffect",
+            "Description": {
+                "Id": "LadyFlameHeaterHeat",
+                "Name": "IN THE HOT TUB",
+                "Details": "This mech is hot",
+                "Icon": "uixSvgIcon_status_sensorsImpaired"
+            },
+            "nature": "Debuff",
+            "statisticData": {
+                "statName": "OverheatLevel",
+                "operation": "Int_Add",
+                "modValue": "-100",
+                "modType": "System.Int32"
+            }
         }
     ]
 }
