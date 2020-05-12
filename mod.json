@@ -1,0 +1,11 @@
+{
+    "Name": "LadyFlame",
+    "Version": "1.0.0",
+    "Enabled": true,    
+    "Manifest": [
+        {
+            "Type": "WeaponDef",
+            "Path": "weapons\\"
+        },
+    ]
+}
