@@ -8,8 +8,14 @@
     "AOECapable": true,
     "statusEffects": [
         {
-            "durationData": {
-                "duration": -1
+            "durationData": {                
+                "duration": 30,
+                "ticksOnActivations": true,
+                "useActivationsOfTarget": true,
+                "ticksOnEndOfRound": true,
+                "ticksOnMovements": true,
+                "stackLimit": 0,
+                "clearedWhenAttacked": false
             },
             "effectType": "StatisticEffect",
             "Description": {
@@ -41,11 +47,11 @@
         },
         {
             "durationData": {
-                "duration": 3,
+                "duration": 30,
                 "ticksOnActivations": true,
                 "useActivationsOfTarget": true,
-                "ticksOnEndOfRound": false,
-                "ticksOnMovements": false,
+                "ticksOnEndOfRound": true,
+                "ticksOnMovements": true,
                 "stackLimit": 0,
                 "clearedWhenAttacked": false
             },
@@ -63,63 +69,26 @@
             },
             "effectType": "StatisticEffect",
             "Description": {
-                "Id": "LadyFlameHeater",
-                "Name": "AFRAID OF HOT TUB 2",
+                "Id": "LadyFlameHeat",
+                "Name": "Generating More Heat",
                 "Details": "This mech cannot take any heat",
                 "Icon": "uixSvgIcon_status_sensorsImpaired"
             },
             "nature": "Debuff",
             "statisticData": {
                 "statName": "HeatGenerated",
-                "operation": "Float_Multiply",
-                "modValue": "9.0",
-                "modType": "System.Single"
-            }
-        },
-        {
-            "durationData": {
-                "duration": 3,
-                "ticksOnActivations": true,
-                "useActivationsOfTarget": true,
-                "ticksOnEndOfRound": false,
-                "ticksOnMovements": false,
-                "stackLimit": 0,
-                "clearedWhenAttacked": false
-            },
-            "targetingData": {
-                "effectTriggerType": "OnHit",
-                "triggerLimit": 0,
-                "extendDurationOnTrigger": 0,
-                "specialRules": "NotSet",
-                "effectTargetType": "NotSet",
-                "range": 0,
-                "forcePathRebuild": false,
-                "forceVisRebuild": false,
-                "showInTargetPreview": true,
-                "showInStatusPanel": true
-            },
-            "effectType": "StatisticEffect",
-            "Description": {
-                "Id": "LadyFlameHeaterHeat",
-                "Name": "IN THE HOT TUB",
-                "Details": "This mech is hot",
-                "Icon": "uixSvgIcon_status_sensorsImpaired"
-            },
-            "nature": "Debuff",
-            "statisticData": {
-                "statName": "OverheatLevel",
                 "operation": "Int_Add",
-                "modValue": "-100",
+                "modValue": "999",
                 "modType": "System.Int32"
             }
         },
         {
             "durationData": {
-                "duration": 3,
+                "duration": 30,
                 "ticksOnActivations": true,
                 "useActivationsOfTarget": true,
-                "ticksOnEndOfRound": false,
-                "ticksOnMovements": false,
+                "ticksOnEndOfRound": true,
+                "ticksOnMovements": true,
                 "stackLimit": 0,
                 "clearedWhenAttacked": false
             },
@@ -137,9 +106,46 @@
             },
             "effectType": "StatisticEffect",
             "Description": {
-                "Id": "LadyFlameHeaterUnsteady",
-                "Name": "WOOZY FROM HOT TUB",
+                "Id": "LadyFlameTolerance",
+                "Name": "Heat Intolerant",
                 "Details": "This mech is hot",
+                "Icon": "uixSvgIcon_status_sensorsImpaired"
+            },
+            "nature": "Debuff",
+            "statisticData": {
+                "statName": "MaxHeat",
+                "operation": "Set",
+                "modValue": "1",
+                "modType": "System.Int32"
+            }
+        },
+        {
+            "durationData": {
+                "duration": 30,
+                "ticksOnActivations": true,
+                "useActivationsOfTarget": true,
+                "ticksOnEndOfRound": false,
+                "ticksOnMovements": true,
+                "stackLimit": 0,
+                "clearedWhenAttacked": false
+            },
+            "targetingData": {
+                "effectTriggerType": "OnHit",
+                "triggerLimit": 0,
+                "extendDurationOnTrigger": 0,
+                "specialRules": "NotSet",
+                "effectTargetType": "NotSet",
+                "range": 0,
+                "forcePathRebuild": false,
+                "forceVisRebuild": false,
+                "showInTargetPreview": true,
+                "showInStatusPanel": true
+            },
+            "effectType": "StatisticEffect",
+            "Description": {
+                "Id": "LadyFlameWoozy",
+                "Name": "WOOZY",
+                "Details": "This mech is woozy",
                 "Icon": "uixSvgIcon_status_sensorsImpaired"
             },
             "nature": "Debuff",
