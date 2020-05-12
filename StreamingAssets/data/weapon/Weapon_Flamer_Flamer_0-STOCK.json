@@ -4,6 +4,8 @@
         "Details": "A Flamethrower that pulses with strange, aphidy energy."
     },
     "MaxRange": 540,
+    "ProjectilesPerShot": 10,
+    "AOECapable": true,
     "statusEffects": [
         {
             "durationData": {
@@ -25,11 +27,54 @@
                 "hideApplicationFloatie": true
             },
             "statisticData": {
-                "statName": "StructureDamagePerShot",
-                "operation": "Float_Add",
-                "modValue": "15.0",
+                "statName": "WalkSpeed",
+                "operation": "Float_Multiply",
+                "modValue": "3.0",
                 "modType": "System.Single",
                 "targetCollection": "Weapon"
+            },
+            "tagData": null,
+            "floatieData": null,
+            "actorBurningData": null,
+            "vfxData": null,
+            "instantModData": null,
+            "poorlyMaintainedEffectData": null
+        },
+        {
+            "durationData": {
+                "duration": -1,
+                "ticksOnActivations": true,
+                "useActivationsOfTarget": true,
+                "ticksOnEndOfRound": false,
+                "ticksOnMovements": false,
+                "stackLimit": 0,
+                "clearedWhenAttacked": false
+            },
+            "targetingData": {
+                "effectTriggerType": "OnHit",
+                "triggerLimit": 0,
+                "extendDurationOnTrigger": 0,
+                "specialRules": "NotSet",
+                "effectTargetType": "NotSet",
+                "range": 0,
+                "forcePathRebuild": false,
+                "forceVisRebuild": false,
+                "showInTargetPreview": true,
+                "showInStatusPanel": true
+            },
+            "effectType": "StatisticEffect",
+            "Description": {
+                "Id": "LadyFlameHeater",
+                "Name": "AFRAID OF HOT TUB",
+                "Details": "This mech cannot take any heat",
+                "Icon": "uixSvgIcon_status_sensorsImpaired"
+            },
+            "nature": "Debuff",
+            "statisticData": {
+                "statName": "HeatGenerated",
+                "operation": "Set",
+                "modValue": "999",
+                "modType": "System.Int32"
             },
             "tagData": null,
             "floatieData": null,
