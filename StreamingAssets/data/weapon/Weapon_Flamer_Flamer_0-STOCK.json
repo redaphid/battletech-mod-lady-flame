@@ -1,6 +1,42 @@
-{    
-    "Description" : {       
-        "Name" : "Fire of Aphids",
-        "Details" : "A Flamethrower that pulses with strange, aphidy energy."    
-    }
+{
+    "Description": {
+        "Name": "Fire of Aphids",
+        "Details": "A Flamethrower that pulses with strange, aphidy energy."
+    },
+    "MaxRange": 540,
+    "statusEffects": [
+        {
+            "durationData": {
+                "duration": -1
+            },
+            "effectType": "StatisticEffect",
+            "Description": {
+                "Id": "StatusEffect-LadyFlame-Aim",
+                "Name": "Perfect Fl-Aim",
+                "Details": "Bypass armor and structure damage",
+                "Icon": "UixSvgIcon_specialAbility_HiredGuns"
+            },
+            "nature": "Buff",
+            "targetingData": {
+                "effectTriggerType": "Passive",
+                "effectTargetType": "Creator",
+                "showInTargetPreview": false,
+                "showInStatusPanel": false,
+                "hideApplicationFloatie": true
+            },
+            "statisticData": {
+                "statName": "StructureDamagePerShot",
+                "operation": "Float_Add",
+                "modValue": "15.0",
+                "modType": "System.Single",
+                "targetCollection": "Weapon"
+            },
+            "tagData": null,
+            "floatieData": null,
+            "actorBurningData": null,
+            "vfxData": null,
+            "instantModData": null,
+            "poorlyMaintainedEffectData": null
+        }
+    ]
 }
