@@ -1,8 +1,6 @@
-{     
-    "MaxRange" : 450,    
+{    
     "Description" : {       
         "Name" : "Fire of Aphids",
-        "Details" : "A Flamethrower that pulses with strange, aphidy energy.",
-        "Icon" : "uixSvgIcon_weapon_Support"
+        "Details" : "A Flamethrower that pulses with strange, aphidy energy."    
     }
 }
