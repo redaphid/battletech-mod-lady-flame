@@ -74,7 +74,7 @@
                 "operation": "Float_Multiply",
                 "modValue": "9.0",
                 "modType": "System.Single"
-            }            
+            }
         },
         {
             "durationData": {
@@ -111,6 +111,43 @@
                 "operation": "Int_Add",
                 "modValue": "-100",
                 "modType": "System.Int32"
+            }
+        },
+        {
+            "durationData": {
+                "duration": 3,
+                "ticksOnActivations": true,
+                "useActivationsOfTarget": true,
+                "ticksOnEndOfRound": false,
+                "ticksOnMovements": false,
+                "stackLimit": 0,
+                "clearedWhenAttacked": false
+            },
+            "targetingData": {
+                "effectTriggerType": "OnHit",
+                "triggerLimit": 0,
+                "extendDurationOnTrigger": 0,
+                "specialRules": "NotSet",
+                "effectTargetType": "NotSet",
+                "range": 0,
+                "forcePathRebuild": false,
+                "forceVisRebuild": false,
+                "showInTargetPreview": true,
+                "showInStatusPanel": true
+            },
+            "effectType": "StatisticEffect",
+            "Description": {
+                "Id": "LadyFlameHeaterUnsteady",
+                "Name": "WOOZY FROM HOT TUB",
+                "Details": "This mech is hot",
+                "Icon": "uixSvgIcon_status_sensorsImpaired"
+            },
+            "nature": "Debuff",
+            "statisticData": {
+                "statName": "UnsteadyThreshold",
+                "operation": "Set",
+                "modValue": "1",
+                "modType": "System.Single"
             }
         }
     ]
